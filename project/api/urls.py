@@ -1,6 +1,8 @@
 from django.urls import path, include
-from .views import main
+from .views import RoomView, RoomQuery
 
 urlpatterns = [
-    path('home', main)
+    # Link a url to a APIView
+    path('room', RoomView.as_view()),
+    path('list', RoomQuery.as_view())
 ]
